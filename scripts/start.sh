@@ -18,7 +18,7 @@ fi
 if [ ! -d /data ];
 then
     echo "Missing /data directory with code to execute"
-    echo "Startup command is: command=java -cp lib/bcmail-jdk15-1.45.jar:lib/bcprov-jdk15-1.45.jar:CA\ Integration\ Server-jar-with-dependencies.jar melin.server.ServerHost"
+    echo "Startup command is: command=java -cp lib/bcmail-jdk15-1.45.jar:lib/bcprov-jdk15-1.45.jar:ca-integration-server.jar melin.server.ServerHost"
     exit 1
 fi
 
