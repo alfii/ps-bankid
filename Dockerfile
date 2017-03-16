@@ -6,7 +6,9 @@ RUN apk -Uu add bash jq
 RUN ln -s /usr/local/java/bin/java /bin/java && \
     ulimit -m unlimited && \
     ulimit -v unlimited && \
-    ulimit -n 65536
+    ulimit -n 65536 && \
+    mkdir -p /data && \
+    mkdir -p /keystore
 
 RUN adduser -D -s /bin/sh bankid
 
