@@ -12,6 +12,9 @@ RUN ln -s /usr/local/java/bin/java /bin/java && \
 
 RUN adduser -D -s /bin/sh bankid
 
+ADD jce/local_policy.jar /usr/local/java/jre/lib/security/
+ADD jce/US_export_policy.jar /usr/local/java/jre/lib/security/
+
 ADD conf/supervisord.conf /etc/supervisord.conf
 
 ADD scripts/start.sh /start.sh
