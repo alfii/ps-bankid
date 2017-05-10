@@ -1,7 +1,7 @@
 FROM cantara/alpine-zulu-jdk8
 MAINTAINER Andreas Krüger <ak@patientsky.com>
 
-RUN apk -Uu add bash jq supervisor
+RUN apk -Uu add bash jq supervisor tzdata
 
 RUN ln -s /usr/local/java/bin/java /bin/java && \
     ulimit -m unlimited && \
