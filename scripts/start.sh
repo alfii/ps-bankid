@@ -23,4 +23,4 @@ then
 fi
 
 # Start supervisord and services
-/usr/bin/supervisord -n -c /etc/supervisord.conf
+exec /usr/bin/supervisord -n -c /etc/supervisord.conf
