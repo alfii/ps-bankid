@@ -20,6 +20,9 @@ RUN javac jce.java && java Test_JCE && rm Test_JCE.class && rm jce.java
 
 ADD conf/supervisord.conf /etc/supervisord.conf
 
+COPY newrelic.jar /data
+COPY newrelic.yml /data
+
 ADD scripts/start.sh /start.sh
 RUN chmod 755 /start.sh
 
